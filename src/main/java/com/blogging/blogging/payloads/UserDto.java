@@ -1,5 +1,6 @@
 package com.blogging.blogging.payloads;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
@@ -18,6 +19,8 @@ public class UserDto {
     @NotEmpty
     @Email
     private String email;
+
+    @JsonIgnore
     @Size(min=5,max = 10)
     private String password;
 
